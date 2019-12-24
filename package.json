@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./src/ --ext .js,.jsx,.ts,.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn typescript && node dist/index.js",
+    "typescript": "tsc"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/Joebourne/splitter/issues"
   },
-  "homepage": "https://github.com/Joebourne/splitter#readme"
+  "homepage": "https://github.com/Joebourne/splitter#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-plugin-import": "^2.19.1",
+    "husky": "^3.1.0",
+    "typescript": "^3.7.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn typescript && yarn lint"
+    }
+  }
 }
