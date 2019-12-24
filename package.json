@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Joebourne/splitter#readme",
   "devDependencies": {
+    "@types/spotify-web-api-node": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
     "eslint": "^6.8.0",
@@ -33,5 +34,8 @@
     "hooks": {
       "pre-commit": "yarn typescript && yarn lint"
     }
+  },
+  "dependencies": {
+    "spotify-web-api-node": "^4.0.0"
   }
 }
